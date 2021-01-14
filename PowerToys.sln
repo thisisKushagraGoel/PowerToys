@@ -300,6 +300,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Telemetry", "Telemetry", "{
 		src\common\Telemetry\TraceLoggingDefines.h = src\common\Telemetry\TraceLoggingDefines.h
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "videoconferencemute", "videoconferencemute", "{BD6D1793-5574-4973-B6BF-13418B20B697}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VideoConferenceShared", "src\modules\videoconference\VideoConferenceShared\VideoConferenceShared.vcxproj", "{459E0768-7EBD-4C41-BBA1-6DB3B3815E0A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VideoConferenceCustomMediaSource", "src\modules\videoconference\VideoConferenceCustomMediaSource\VideoConferenceCustomMediaSource.vcxproj", "{43AD9BF7-E765-48FE-9826-71A8F2CB12DD}"
+	ProjectSection(ProjectDependencies) = postProject
+		{459E0768-7EBD-4C41-BBA1-6DB3B3815E0A} = {459E0768-7EBD-4C41-BBA1-6DB3B3815E0A}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VideoConferenceModule", "src\modules\videoconference\VideoConferenceModule\Video Conference.vcxproj", "{5ABA70DE-3A3F-41F6-A1F5-D1F74F54F9BB}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VideoConferenceVirtualDriver", "src\modules\videoconference\VideoConferenceVirtualDriver\VideoConferenceVirtualDriver.vcxproj", "{3098C6BF-E96E-4793-A70E-FB09B741580A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -606,6 +619,22 @@ Global
 		{07C389E3-6BC8-41CF-923E-307B1265FA2D}.Debug|x64.Build.0 = Debug|x64
 		{07C389E3-6BC8-41CF-923E-307B1265FA2D}.Release|x64.ActiveCfg = Release|x64
 		{07C389E3-6BC8-41CF-923E-307B1265FA2D}.Release|x64.Build.0 = Release|x64
+		{459E0768-7EBD-4C41-BBA1-6DB3B3815E0A}.Debug|x64.ActiveCfg = Debug|x64
+		{459E0768-7EBD-4C41-BBA1-6DB3B3815E0A}.Debug|x64.Build.0 = Debug|x64
+		{459E0768-7EBD-4C41-BBA1-6DB3B3815E0A}.Release|x64.ActiveCfg = Release|x64
+		{459E0768-7EBD-4C41-BBA1-6DB3B3815E0A}.Release|x64.Build.0 = Release|x64
+		{43AD9BF7-E765-48FE-9826-71A8F2CB12DD}.Debug|x64.ActiveCfg = Debug|x64
+		{43AD9BF7-E765-48FE-9826-71A8F2CB12DD}.Debug|x64.Build.0 = Debug|x64
+		{43AD9BF7-E765-48FE-9826-71A8F2CB12DD}.Release|x64.ActiveCfg = Release|x64
+		{43AD9BF7-E765-48FE-9826-71A8F2CB12DD}.Release|x64.Build.0 = Release|x64
+		{5ABA70DE-3A3F-41F6-A1F5-D1F74F54F9BB}.Debug|x64.ActiveCfg = Debug|x64
+		{5ABA70DE-3A3F-41F6-A1F5-D1F74F54F9BB}.Debug|x64.Build.0 = Debug|x64
+		{5ABA70DE-3A3F-41F6-A1F5-D1F74F54F9BB}.Release|x64.ActiveCfg = Release|x64
+		{5ABA70DE-3A3F-41F6-A1F5-D1F74F54F9BB}.Release|x64.Build.0 = Release|x64
+		{3098C6BF-E96E-4793-A70E-FB09B741580A}.Debug|x64.ActiveCfg = Debug|x64
+		{3098C6BF-E96E-4793-A70E-FB09B741580A}.Debug|x64.Build.0 = Debug|x64
+		{3098C6BF-E96E-4793-A70E-FB09B741580A}.Release|x64.ActiveCfg = Release|x64
+		{3098C6BF-E96E-4793-A70E-FB09B741580A}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -696,6 +725,11 @@ Global
 		{98537082-0FDB-40DE-ABD8-0DC5A4269BAB} = {1AFB6476-670D-4E80-A464-657E01DFF482}
 		{B39DC643-4663-475E-B329-03F0C9918D48} = {1AFB6476-670D-4E80-A464-657E01DFF482}
 		{8F62026A-294B-41C6-8839-87463613F216} = {1AFB6476-670D-4E80-A464-657E01DFF482}
+		{BD6D1793-5574-4973-B6BF-13418B20B697} = {4574FDD0-F61D-4376-98BF-E5A1262C11EC}
+		{459E0768-7EBD-4C41-BBA1-6DB3B3815E0A} = {BD6D1793-5574-4973-B6BF-13418B20B697}
+		{43AD9BF7-E765-48FE-9826-71A8F2CB12DD} = {BD6D1793-5574-4973-B6BF-13418B20B697}
+		{5ABA70DE-3A3F-41F6-A1F5-D1F74F54F9BB} = {BD6D1793-5574-4973-B6BF-13418B20B697}
+		{3098C6BF-E96E-4793-A70E-FB09B741580A} = {BD6D1793-5574-4973-B6BF-13418B20B697}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C3A2F9D1-7930-4EF4-A6FC-7EE0A99821D0}

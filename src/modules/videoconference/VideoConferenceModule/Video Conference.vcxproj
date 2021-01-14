@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\..\hasWDK.props" />
+  <Import Project="WDK_Video Conference.vcxproj" Condition="$(HasWDK)==true" />
+  <Import Project="..\..\..\wdk_skip.vcxproj" Condition="$(HasWDK)==false" />
+  <PropertyGroup Label="Globals">
+    <IntDirSharingDetected>None</IntDirSharingDetected>
+    <ProjectGuid>{5ABA70DE-3A3F-41F6-A1F5-D1F74F54F9BB}</ProjectGuid>
+  </PropertyGroup>
+  <ItemGroup>
+    <ClCompile Include="trace.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="trace.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\common\Display\Display.vcxproj">
+      <Project>{caba8dfb-823b-4bf2-93ac-3f31984150d9}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\common\SettingsAPI\SetttingsAPI.vcxproj">
+      <Project>{6955446d-23f7-4023-9bb3-8657f904af99}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\common\Themes\Themes.vcxproj">
+      <Project>{98537082-0fdb-40de-abd8-0dc5a4269bab}</Project>
+    </ProjectReference>
+  </ItemGroup>
+</Project>
